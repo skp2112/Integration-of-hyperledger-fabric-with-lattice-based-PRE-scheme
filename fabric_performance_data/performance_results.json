@@ -1,0 +1,33 @@
+{
+    "metrics": {
+        "keygen_time_ms": 3.7870407104492188,
+        "encrypt_time_ms": 1.9330978393554688,
+        "rekeygen_time_ms": 2.698659896850586,
+        "reencrypt_time_ms": 0.6287097930908203,
+        "decrypt_time_ms": 0.354766845703125,
+        "pubkey_size_bytes": 262967,
+        "ciphertext_size_bytes": 263011,
+        "rekey_size_bytes": 263131,
+        "store_record_latency_ms": 0.00476837158203125,
+        "request_share_latency_ms": 0.0019073486328125,
+        "log_share_latency_ms": 0.012159347534179688
+    },
+    "verification": {
+        "original_data": [
+            120,
+            80,
+            366
+        ],
+        "decrypted_data": [
+            120,
+            80,
+            366
+        ],
+        "match": true
+    },
+    "test_info": {
+        "timestamp": 1754674470.3638341,
+        "fabric_network": "test-network",
+        "crypto_scheme": "BFVRNS PRE"
+    }
+}

@@ -1,0 +1,14 @@
+# Ignore Python virtual environment
+venv/
+venv311/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore Fabric performance output
+fabric_performance_data/
