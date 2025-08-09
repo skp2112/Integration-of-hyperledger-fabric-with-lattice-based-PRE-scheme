@@ -1,0 +1,158 @@
+{
+    "summary": {
+        "averages": {
+            "keygen_time_ms": 3.3911863962809243,
+            "encrypt_time_ms": 1.8347104390462239,
+            "rekeygen_time_ms": 2.735296885172526,
+            "reencrypt_time_ms": 0.6378491719563802,
+            "decrypt_time_ms": 0.4333655039469401,
+            "pubkey_size_bytes": 262967.0,
+            "ciphertext_size_bytes": 263011.0,
+            "rekey_size_bytes": 263131.0,
+            "store_record_latency_ms": -3.0,
+            "request_share_latency_ms": -3.0,
+            "log_share_latency_ms": -3.0
+        },
+        "std_deviations": {
+            "keygen_time_ms": 0.25233813130570976,
+            "encrypt_time_ms": 0.11318905128520826,
+            "rekeygen_time_ms": 0.03854687672535618,
+            "reencrypt_time_ms": 0.01849379721285093,
+            "decrypt_time_ms": 0.046209077224699587,
+            "pubkey_size_bytes": 0.0,
+            "ciphertext_size_bytes": 0.0,
+            "rekey_size_bytes": 0.0,
+            "store_record_latency_ms": 0.0,
+            "request_share_latency_ms": 0.0,
+            "log_share_latency_ms": 0.0
+        },
+        "run_count": 3,
+        "blockchain_success_counts": {
+            "store_record": 0,
+            "request_share": 0,
+            "log_share": 0
+        },
+        "sample_verification": {
+            "original_data": [
+                120,
+                80,
+                366
+            ],
+            "decrypted_data": [
+                120,
+                80,
+                366
+            ],
+            "match": true
+        }
+    },
+    "individual_runs": [
+        {
+            "run_number": 1,
+            "metrics": {
+                "keygen_time_ms": 3.3981800079345703,
+                "encrypt_time_ms": 1.912832260131836,
+                "rekeygen_time_ms": 2.7828216552734375,
+                "reencrypt_time_ms": 0.6380081176757812,
+                "decrypt_time_ms": 0.4553794860839844,
+                "pubkey_size_bytes": 262967,
+                "ciphertext_size_bytes": 263011,
+                "rekey_size_bytes": 263131,
+                "store_record_latency_ms": -1,
+                "request_share_latency_ms": -1,
+                "log_share_latency_ms": -1
+            },
+            "verification": {
+                "original_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "decrypted_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "match": true
+            },
+            "test_info": {
+                "timestamp": 1754755632.794128,
+                "fabric_network": "test-network",
+                "crypto_scheme": "BFVRNS PRE"
+            }
+        },
+        {
+            "run_number": 2,
+            "metrics": {
+                "keygen_time_ms": 3.6966800689697266,
+                "encrypt_time_ms": 1.674652099609375,
+                "rekeygen_time_ms": 2.6884078979492188,
+                "reencrypt_time_ms": 0.6151199340820312,
+                "decrypt_time_ms": 0.36907196044921875,
+                "pubkey_size_bytes": 262967,
+                "ciphertext_size_bytes": 263011,
+                "rekey_size_bytes": 263131,
+                "store_record_latency_ms": -1,
+                "request_share_latency_ms": -1,
+                "log_share_latency_ms": -1
+            },
+            "verification": {
+                "original_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "decrypted_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "match": true
+            },
+            "test_info": {
+                "timestamp": 1754755633.8164861,
+                "fabric_network": "test-network",
+                "crypto_scheme": "BFVRNS PRE"
+            }
+        },
+        {
+            "run_number": 3,
+            "metrics": {
+                "keygen_time_ms": 3.0786991119384766,
+                "encrypt_time_ms": 1.916646957397461,
+                "rekeygen_time_ms": 2.734661102294922,
+                "reencrypt_time_ms": 0.6604194641113281,
+                "decrypt_time_ms": 0.4756450653076172,
+                "pubkey_size_bytes": 262967,
+                "ciphertext_size_bytes": 263011,
+                "rekey_size_bytes": 263131,
+                "store_record_latency_ms": -1,
+                "request_share_latency_ms": -1,
+                "log_share_latency_ms": -1
+            },
+            "verification": {
+                "original_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "decrypted_data": [
+                    120,
+                    80,
+                    366
+                ],
+                "match": true
+            },
+            "test_info": {
+                "timestamp": 1754755634.8282351,
+                "fabric_network": "test-network",
+                "crypto_scheme": "BFVRNS PRE"
+            }
+        }
+    ],
+    "statistics": {
+        "total_runs": 3,
+        "successful_runs": 3,
+        "success_rate": 100.0
+    }
+}
