@@ -1,11 +1,20 @@
-```
 # Post-Quantum secure Health Insurance Scheme based on Hyperledger Fabric
 
 ## Project Summary
-
-A full-stack integration of lattice-based cryptography (OpenFHE BFVRNS PRE) with Hyperledger Fabric, enabling secure proxy re-encryption and data sharing in a healthcare environment. Written in Python and using the Fabric Python SDK.
+A comprehensive integration of lattice-based cryptography (OpenFHE BFVRNS PRE) with Hyperledger Fabric, featuring secure proxy re-encryption and data sharing in healthcare environments. The system includes **multi-run performance analysis with statistical averaging** to provide reliable benchmarking results. Written in Python using the Fabric Python SDK with detailed performance metrics and comprehensive reporting.
 
 ***
+
+
+### Multi-Run Performance Analysis
+- **Statistical Averaging**: Executes multiple workflow iterations (default: 3 runs) for reliable performance metrics
+- **Standard Deviation Calculation**: Provides performance variability analysis with confidence intervals  
+- **Comprehensive Reporting**: Generates detailed performance reports with averages, standard deviations, and recommendations
+- **Automated Analysis**: Includes bottleneck identification, stability assessment, and suitability analysis
+
+### Available Applications
+- `main_app.py`: Single-run execution for basic testing
+- `main_app_new.py`: **Enhanced multi-run analysis with statistical reporting** (recommended for benchmarking)
 
 ## Platform & Environment Setup
 
@@ -63,16 +72,17 @@ pip install asyncio dataclasses openfhe
 
 ## Project Folder Structure
 
-```
-fabric-samples/
+`` fabric-samples/
 └── chaincode/
-    └── pre-health/
-        ├── main_app.py
-        ├── README.md
-        ├── .fabricignore
-        └── fabric_performance_data/
-```
-
+└── pre-health/
+├── main_app.py # Single-run basic version
+├── main_app_new.py # Enhanced multi-run statistical version
+├── README.md
+├── .fabricignore
+└── fabric_performance_data/
+├── aggregated_performance_results.json # Statistical summary
+├── performance_results_run_*.json # Individual run data
+└── *.enc, *.key files # Generated crypto files
 ***
 
 ## Running Your Workflow
@@ -82,7 +92,7 @@ fabric-samples/
 3. Run:
    ```
    cd ~/fabric-workspace/fabric-samples/chaincode/pre-health/
-   python3 main_app.py
+   python3 main_app.py/python3 main_app_new.py ##for single run or multiple run for average performance
    ```
 4. Outputs in `fabric_performance_data/`.
 
@@ -90,11 +100,21 @@ fabric-samples/
 
 ## Notes & Known Issues
 - Fabric client user init may require manual MSP cert loading.
-- Exclude `venv` in `.fabricignore`.
+### Fabric Integration
+- Fabric client user initialization may require manual MSP certificate loading due to SDK version variations
+- Blockchain transactions may be skipped if user initialization fails - crypto operations continue normally
+- Ensure Fabric test network is running before executing workflows
+
+### Performance Analysis
+- **Multi-run version recommended** for reliable benchmarking results
+- Minimum 3 runs suggested for statistical significance (10+ runs for high confidence)
+- Runtime files (*.enc, *.key) are auto-generated and excluded from version control via `.fabricignore`
+- Individual run data preserved in separate JSON files for detailed analysis
+
+### System Requirements
+- Sufficient disk space for multiple encrypted file generations
+- Consistent system load recommended during multi-run analysis for reliable results
 
 ## License
 
-```
-```
 
-***
