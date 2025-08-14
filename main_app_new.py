@@ -24,6 +24,18 @@ def setup_crypto_context():
     cc.Enable(PKESchemeFeature.LEVELEDSHE)
     cc.Enable(PKESchemeFeature.PRE)
 
+    # Extract and display cryptographic parameters
+    ring_dimension = cc.GetRingDimension()
+    ciphertext_modulus = cc.GetModulus()
+    plaintext_modulus = parameters.GetPlaintextModulus()
+    
+    # Display the cryptographic parameters
+    print(f"[CRYPTO] BFVRNS crypto context ready")
+    print(f"[CRYPTO] Ring Dimension (N): {ring_dimension}")
+    print(f"[CRYPTO] Plaintext Modulus (t): {plaintext_modulus}")
+    print(f"[CRYPTO] Ciphertext Modulus (q): {ciphertext_modulus}")
+    print(f"[CRYPTO] Security Level: 192-bit classical")
+
     data_dir = Path("fabric_performance_data")
     data_dir.mkdir(exist_ok=True)
 
@@ -809,7 +821,7 @@ async def execute_single_run_with_clients(cc, hospital, insurance, fabric_availa
         "test_info": {
             "timestamp": time.time(),
             "fabric_network": "test-network",
-            "crypto_scheme": "BFVRNS PRE"
+            "crypto_scheme": "BFVRNS PRE (192-bit security)"
         }
     }
 
