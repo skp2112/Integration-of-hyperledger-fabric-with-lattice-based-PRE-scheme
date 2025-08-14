@@ -16,7 +16,7 @@ def setup_crypto_context():
     parameters = CCParamsBFVRNS()
     parameters.SetPlaintextModulus(65537)
     parameters.SetMultiplicativeDepth(1)
-    parameters.SetSecurityLevel(HEStd_128_classic)
+    parameters.SetSecurityLevel(HEStd_192_classic)
 
     cc = GenCryptoContext(parameters)
     cc.Enable(PKESchemeFeature.PKE)
